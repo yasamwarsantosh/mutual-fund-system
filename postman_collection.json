@@ -1,0 +1,46 @@
+```json id="postmanfinal"
+{
+  "info": {
+    "name": "Mutual Fund System APIs",
+    "_postman_id": "12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buy Fund",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"fundId\": 1,\n  \"amount\": 1000,\n  \"idempotencyKey\": \"BUY-001\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/buy",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "buy"]
+        }
+      }
+    },
+    {
+      "name": "Sell Fund",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"fundId\": 1,\n  \"units\": 2,\n  \"idempotencyKey\": \"SELL-001\"\n}"
+        },
+        "url": "http://localhost:8080/api/sell"
+      }
+    },
+    {
+      "name": "Get Portfolio",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/portfolio/1"
+      }
+    }
+  ]
+}
