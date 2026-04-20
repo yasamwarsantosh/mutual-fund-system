@@ -7,7 +7,7 @@
 - Transaction Management
 
 ## Tech Stack
-- Java 17
+- Java 11
 - Spring Boot
 - PostgreSQL
 
